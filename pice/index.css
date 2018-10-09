@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f5f5f5;
+}
+ul{
+	list-style: none;
+}
+#content{
+	width: 1226px;
+	height: 614px;
+	box-shadow: 0 0 9px #222;
+	margin: 100px auto;
+	display: flex;/*开启弹性盒模式*/
+	justify-content: space-between;/*两端对齐*/
+	align-items: center;
+	padding: 15px;
+}
+#content .c_left{
+	height: 614px;
+	width: 234px;
+}
+
+#content .c_right{
+	width: 980px;
+	height: 612px;
+}
+#content .c_right ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;/*内部元素按照自身宽度  强制换行*/
+	justify-content: space-around;/*强制环绕 均分 内部元素默认横向排列方式*/
+	align-items: center;
+}
+#content .c_right ul li{
+	overflow: hidden;
+	position: relative;
+	width: 234px;
+	height: 300px;
+	background-color: #fff;
+	display: flex;/*默认横向排列*/
+	flex-direction: column;/*纵向排列*/
+	align-items: center;
+	justify-content: flex-start;/*主轴方向 元素排列方式 从头排列*/
+}
+#content .c_right ul li:hover{
+	box-shadow: 0 10px 10px #bbb;
+	margin-top: -10px;
+}
+#content .c_right ul li img{
+	width: 160px;
+	height: 160px;
+}
+#content .c_right h3.title{
+	line-height: 50px;
+	font-size: 16px;
+	color: #222;
+}
+#content .c_right p.dec{
+	font-size: 14px;
+	color: #ccc;
+	line-height: 40px;
+}
+#content .c_right p.price{
+	font-size: 12px;
+	color: #f60;
+}
+#content .c_right .comments{
+	width: 100%;
+	height: 75px;
+	background-color: #f60;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	bottom: -75px;
+	transition: .5s;
+}
+#content .c_right .comments p{
+	text-indent: 2em;/*首行缩进2个字*/
+}
+#content .c_right ul li:hover .comments{
+	bottom: 0;
+}

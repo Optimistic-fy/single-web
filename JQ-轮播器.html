@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播器</title>
+	<script src="js/jquery.animate-colors-min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/轮播器.js"></script>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		cursor: pointer;
+		list-style-type: none;
+	}
+	img{
+		position: absolute;
+		cursor: default;
+	}
+	.picture{
+		width: 100%;
+		height: 100%;
+	}
+	.try{
+		position: relative;
+		top: 100px;
+		margin: 0 auto;
+		width: 1226px;
+		height: 460px;
+	}
+	.spot{
+		position: absolute;
+		right: 30px;
+		bottom: 10px;
+		width: 100px;
+		height: 20px;
+	}
+	.spot li{
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: rgba(0,0,0,.5);
+		float: left;
+		margin: 5px;
+		cursor: pointer;
+	}
+	.spot .on{
+		background: rgba(255,255,255,.5);
+	}
+	.btn .pre,.btn .next{
+		position: absolute;
+		top: 200px;
+		width: 41px;
+		height: 69px;
+		background-image: url(images/icon-slides.png);
+		cursor: pointer;
+	}
+	.btn .pre{
+		left: 200px;
+		background-position-x:0px; 
+	}
+	.btn .next{
+		right: 20px;
+		background-position-x:-42px; 
+	}
+	.btn .pre:hover{
+		background-position-x:83px; 
+	}
+	.btn .next:hover{
+		background-position-x:42px; 
+	}
+	</style>
+</head>
+<body>
+	<div class="try">
+		<div class="picture">
+			<ul>
+				<li><a href="javascript:;"><img src="images/T1hiDvBvVv1RXrhCrK.jpg" alt="" /></a></li>
+				<li><a href="javascript:;"><img src="images/T1jrxjB_VT1RXrhCrK.jpg" alt="" /></a></li>
+				<li><a href="javascript:;"><img src="images/T1oTJjBKKT1RXrhCrK.jpg" alt="" /></a></li>
+				<li><a href="javascript:;"><img src="images/T1RICjB7DT1RXrhCrK.jpg" alt="" /></a></li>
+				<li><a href="javascript:;"><img src="images/T1vWdTBKDv1RXrhCrK.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+		<div class="spot">
+			<ul>
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="btn">
+			<div class="pre">
+			</div>
+			<div class="next">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
